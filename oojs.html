@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>See below</p>
+
+  </body>
+
+    <script>
+
+/*  Exercise 2 - Creating an object literal with a few properties, and an array with multiple items
+
+    let bandInfo;
+
+    const band = {
+        name: 'Phish',
+        nationality: 'American',
+        genre: 'rock',
+        members: 5,
+        formed: 1962,
+        split: 1980,
+        albums: [
+            {name: 'Our First Album', released: 1963}, {name: 'Our Second Album', released: 1965}
+        ]
+    }
+
+    bandInfo = `The band ${band.name} got together in the year ${band.formed}. They were of nationality ${band.nationality} and had ${band.members} members.
+    The title of their first album was ${band.albums[0].name} and it was released in ${band.albums[0].released}. They ultimatelty split up in ${band.split}. `;
+*/
+
+/*  Exercise 3 - Rewriting an object's method to use "this" syntax when logging its message to the console
+
+const cat = {
+    name : 'Bertie',
+    breed : 'Cymric',
+    color : 'white',
+    greeting: function() {
+        console.log(`Hello, said ${ this.name } the ${ this.breed }.`);
+    }
+}
+
+const cat2 = {
+  name : 'Elfie',
+  breed : 'Aphrodite Giant',
+  color : 'ginger',
+  greeting: function() {
+    console.log(`Hello, said ${ this.name } the ${ this.breed }.`);
+  }
+}
+
+cat.greeting();
+cat2.greeting();
+
+*/
+
+/* Exercise 4 - rewriting the syntax from Exercise #3 using a constructor */
+
+function Cat (name, breed, color) {
+    this.name = name,
+    this.breed = breed,
+    this.color = color,
+    this.greeting = function() {
+        console.log(`Hello, said ${ this.name } the ${ this.breed }.`);
+    }
+}
+
+
+const cat1 = new Cat('Bertie', 'Cymric', 'white');
+const cat2 = new Cat('Elfie', 'Aphrodite Giant', 'ginger');
+
+cat1.greeting();
+cat2.greeting();
+
+    </script>
+</html>
